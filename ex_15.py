@@ -2,7 +2,7 @@
 
 from random import choice
 
-palabras = ['panadero', 'dinosaurio', 'helipuerto', 'tiburon']
+palabras = ['panadero', 'dinosaurio', 'helipuerto', 'tiburon', 'araña', 'auto']
 
 letras_correctas = []
 
@@ -52,9 +52,11 @@ def chequear_letra(letra_elegida,palabra_oculta,vidas,coincidencias):
     
     fin = False
     
-    if letra_elegida in palabra_oculta:
+    if letra_elegida in palabra_oculta and letra_elegida not in letras_correctas:
         letras_correctas.append(letra_elegida)
         coincidencias += 1
+    elif letra_elegida in palabra_oculta and letra_elegida in letras_correctas:
+        print("Ya has ingresado esa letra, intenta con otra!!!")
     
     else:
         letras_incorrectar.append(letra_elegida)
