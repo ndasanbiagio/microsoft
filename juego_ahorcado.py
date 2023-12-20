@@ -60,7 +60,7 @@ def chequear_letra(letra_elegida,palabra_oculta,vidas,coincidencias):
     
     else:
         letras_incorrectar.append(letra_elegida)
-        vidas -= 1
+        vidas -= 1 
     
     if vidas == 0:
         fin = perder()
