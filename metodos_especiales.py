@@ -25,7 +25,7 @@ class CD:
 mi_cd = CD('Pink Floyd', 'The Wall', 24)
 
 
-del mi_cd
+# del mi_cd  # ------------> BORRA TODO SIN AVISAR
 
 print(len(mi_cd))
 
